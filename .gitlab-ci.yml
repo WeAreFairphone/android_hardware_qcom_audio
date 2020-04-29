@@ -1,0 +1,13 @@
+stages:
+  - update-from-upstream
+
+include:
+  - project: 'e/priv/os/build'
+    ref: master
+    file: '/templates/.gitlab-ci-update-from-upstream.yml'
+
+pie-caf-8996:
+  extends: .update from upstream
+  variables:
+    UPSTREAM_BRANCH: lineage-16.0-caf-8996
+    LOCAL_BRANCH: v1-pie-caf-8996
